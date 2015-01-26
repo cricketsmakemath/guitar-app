@@ -49,8 +49,17 @@ chordizer.controller('NoteListCtrl', function ($scope, $http, $rootScope) {
 		if(thisChordType === 'm6/9') {
 			thisChordType = 'm69';
 		}
-		if(thisChordNote.match(/[a-z]/i)) {
+		if(thisChordNote.match(/[a-z#]/i)) {
 			thisChordNote = thisChordNote.slice(-2);
+		}
+		if(thisChordNote === 'Ab') {
+			thisChordNote = 'G#';
+		}
+		if(thisChordNote === 'Db') {
+			thisChordNote = 'C#';
+		}
+		if(thisChordNote === 'Gb') {
+			thisChordNote = 'F#';
 		}
 		var thisChord = thisChordNote + thisChordType;
 		if (typeof jtab.Chords[thisChord] != 'undefined') {
