@@ -1,9 +1,7 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
+  "name": "guitar-app",
+  "description": "A guitar chord and scale generator",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.3.x",
