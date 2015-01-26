@@ -1,7 +1,11 @@
 /* app css stylesheet */
-
+body {
+	background-color:#ecf0f1;
+}
 .btn-chord {
-	margin-bottom:2px;
+	width:100%;
+	line-height:1.5;
+	font-size:10px;
 }
 th {
 	background-color: #ecf0f1;

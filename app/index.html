@@ -20,48 +20,6 @@
 		<div class="page-header">
 		  <h1>Crickets Make Chords <small>and scales</small></h1>
 		</div>
-		<div class="panel panel-primary" ng-controller="NoteListCtrl">
-			<div class="panel-heading">Chord Generator</div>
-	  		<div class="panel-body">
-
-	  			<div class="row">
-	  				<div class="col-lg-2">
-	  					<select class="form-control chord-form-control" id="chord-note" ng-model="chordNote" ng-change="chordDescription()">
-							<option ng-repeat="note in notes" value="{{note}}">{{note}}</option>
-						</select>
-	  				</div>
-	  				<div class="col-lg-3">
-	  					<select class="form-control chord-form-control" id="chord-type" ng-model="chordType" ng-change="chordDescription()">
-							<option ng-repeat="chordType in chordTypes" value="{{chordType.label}}">{{chordType.label}}</option>
-						</select>
-	  				</div>
-	  				
-	  			</div>
-	  			<br>
-
-	  			<div class="row">
-
-	  				<div class="col-lg-6">
-
-			  			<table class="table table-bordered">
-			  				<tr>
-			  					<th ng-repeat="chordFormulaStep in chordFormula">
-								    {{chordFormulaStep}}
-							    </th>
-			  				</tr>
-			  				<tr>
-			  					<td ng-repeat="noteInChord in notesInChord">
-							    	{{noteInChord}}
-							    </td>	
-			  				</tr>
-		  				</table>
-		  				<div class="jtab" id="notationContainer"></div>
-	  				</div>
-
-  				</div>
-
-		    </div>
-		</div>
 
 		
 		<div class="panel panel-primary" ng-controller="ScaleCtrl">
@@ -116,6 +74,55 @@
 
 		    </div>
 		</div>
+
+
+
+
+		<div class="panel panel-primary" ng-controller="NoteListCtrl">
+			<div class="panel-heading">Chord Generator</div>
+	  		<div class="panel-body">
+
+	  			<div class="row">
+	  				<div class="col-lg-2">
+	  					<select class="form-control chord-form-control" id="chord-note" ng-model="chordNote" ng-change="chordDescription()">
+							<option ng-repeat="note in notes" value="{{note}}">{{note}}</option>
+						</select>
+	  				</div>
+	  				<div class="col-lg-3">
+	  					<select class="form-control chord-form-control" id="chord-type" ng-model="chordType" ng-change="chordDescription()">
+							<option ng-repeat="chordType in chordTypes" value="{{chordType.label}}">{{chordType.label}}</option>
+						</select>
+	  				</div>
+	  				
+	  			</div>
+	  			<br>
+
+	  			<div class="row">
+
+	  				<div class="col-lg-6">
+
+			  			<table class="table table-bordered">
+			  				<tr>
+			  					<th ng-repeat="chordFormulaStep in chordFormula">
+								    {{chordFormulaStep}}
+							    </th>
+			  				</tr>
+			  				<tr>
+			  					<td ng-repeat="noteInChord in notesInChord">
+							    	{{noteInChord}}
+							    </td>	
+			  				</tr>
+		  				</table>
+		  				<div class="jtab" id="notationContainer"></div>
+	  				</div>
+
+  				</div>
+
+		    </div>
+		</div>
+
+
+		
 
 	</div>
 </body>
