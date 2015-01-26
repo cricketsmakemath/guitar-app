@@ -1,0 +1,11 @@
+/* app css stylesheet */
+.note-badge {
+	margin-right: 5px;
+	font-size: 20px;
+}
+.btn-chord {
+	margin-bottom:2px;
+}
+th {
+	background-color: #f5f5f5;
+}
