@@ -186,6 +186,9 @@ var chordTypes = [
 	{
 		"label":"9", "formula":["1" , "3", "5", "b7", "9"]
 	},
+	{
+		"label":"13", "formula":["1" , "3", "5", "b7", "9", "11", "13"]
+	},
 	// {
 	// 	"label":"11", "formula":["1" , "5", "b7", "11"]
 	// },
@@ -193,9 +196,24 @@ var chordTypes = [
 		"label":"dim", "formula":["1" , "b3", "b5"]
 	},
 	{
+		"label":"sus2", "formula":["1" , "2", "9", "5"]
+	},
+	{
 		"label":"sus4", "formula":["1" , "4", "5"]
 	},
 	{
 		"label":"aug", "formula":["1" , "3", "#5"]
-	}
+	},
+	{
+		"label":"7b5", "formula":["1", "3", "b5", "b7"]
+	},
+	{
+		"label":"7#5", "formula":["1", "3", "#5", "b7"]
+	},
+	{
+		"label":"m7b5", "formula":["1", "b3", "b5", "b7"]
+	},
+	{
+		"label":"7b9", "formula":["1", "3", "5", "b7", "b9"]
+	}	
 ];
