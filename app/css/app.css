@@ -11,3 +11,6 @@ th {
 	background-color: #ecf0f1;
 	color:#95a5a6;
 }
+.form-control {
+	margin-bottom:4px;
+}
