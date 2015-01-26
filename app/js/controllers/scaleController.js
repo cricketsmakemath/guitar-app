@@ -19,7 +19,6 @@ chordizer.controller('ScaleCtrl', function ($scope, $http, $rootScope) {
 	};
 
 	$scope.updateChord = function(chordNote, chordType) {
-		//console.log(chordNote + ' ' + chordType);
 		$rootScope.chordNote = chordNote;
 		$rootScope.chordType = chordType;
 	};
@@ -36,7 +35,7 @@ chordizer.controller('ScaleCtrl', function ($scope, $http, $rootScope) {
 			}
 		}
 		for(var i = 0; i < scaleFormula.length; i++) {
-			if (scaleFormula[i].match(/[a-z]/i)) {
+			if (scaleFormula[i].match(/[a-z#]/i)) {
 				var noteModifier = scaleFormula[i].charAt(0);
 				var thisNoteIndex = parseInt(scaleFormula[i].substring(1));
 				if(thisNoteIndex > baseModeNotes.length) {
@@ -53,7 +52,14 @@ chordizer.controller('ScaleCtrl', function ($scope, $http, $rootScope) {
 					}
 				}
 				if(noteModifier === '#') {
-					// TODO program sharp function
+					var thisSharpedNote = notes.indexOf(thisNote) + 1;
+					//notesInScale.push(notes[thisSharpedNote]);
+					if(thisSharpedNote >= notes.length) {
+						var updatedSharpedNoteIndex = thisSharpedNote - notes.length;
+					 	notesInScale.push(notes[updatedSharpedNoteIndex]);
+					} else {
+						notesInScale.push(notes[thisSharpedNote]);
+					}
 				}
 			} else {
 				var thisNoteIndex = parseInt(scaleFormula[i]) - 1;
@@ -67,10 +73,8 @@ chordizer.controller('ScaleCtrl', function ($scope, $http, $rootScope) {
 		var compatiblieChords = [];
 		var notesInCurrentChord = [];
 		for(var i = 0; i < notesInScale.length; i++) {
-			//console.log(notesInScale[i]);
 			compatiblieChords[i] = {'note':notesInScale[i], 'chords':[]};
 			for(var x = 0; x < chordTypes.length; x++) {
-				//console.log(notesInScale[i] + ' ' + chordTypes[x].label);
 				notesInCurrentChord = $scope.GlobalHelpers.getChordNotes(notesInScale[i], chordTypes[x].label);
 				var isMatch = true;
 				for(y = 0; y < notesInCurrentChord.length; y++) {
@@ -84,7 +88,6 @@ chordizer.controller('ScaleCtrl', function ($scope, $http, $rootScope) {
 				}
 			}
 		}
-		console.log(compatiblieChords);
 		return compatiblieChords;
 	};
 

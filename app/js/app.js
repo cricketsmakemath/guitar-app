@@ -60,7 +60,7 @@ var chordizer = angular.module('chordFinderApp', []).run(function($rootScope) {
 						}
 					}
 					if(noteModifier === '#') {
-
+						
 					}
 				} else {
 					var thisNoteIndex = parseInt(chordFormula[i]) - 1;
