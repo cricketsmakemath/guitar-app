@@ -30,11 +30,13 @@
 			  			<div class="row">
 			  				<div class="col-lg-3">
 			  					<select class="form-control" ng-model="scaleNote" ng-change="getScale()">
+			  						<option value="" disabled selected>Note</option>
 									<option ng-repeat="note in notes">{{note}}</option>
 								</select>
 			  				</div>
 			  				<div class="col-lg-5">
 			  					<select class="form-control" ng-model="scaleType" ng-change="getScale()">
+			  						<option value="" disabled selected>Scale</option>
 									<option ng-repeat="scaleMode in scaleModes">{{scaleMode.label}}</option>
 								</select>
 			  				</div>	
@@ -87,11 +89,13 @@
 			  			<div class="row">
 			  				<div class="col-lg-3">
 			  					<select class="form-control chord-form-control" id="chord-note" ng-model="chordNote" ng-change="chordDescription()">
+			  						<option value="" disabled selected>Note</option>
 									<option ng-repeat="note in notes" value="{{note}}">{{note}}</option>
 								</select>
 			  				</div>
 			  				<div class="col-lg-5">
 			  					<select class="form-control chord-form-control" id="chord-type" ng-model="chordType" ng-change="chordDescription()">
+			  						<option value="" disabled selected>Chord Type</option>
 									<option ng-repeat="chordType in chordTypes" value="{{chordType.label}}">{{chordType.label}}</option>
 								</select>
 			  				</div>
