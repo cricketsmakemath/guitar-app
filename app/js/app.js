@@ -125,6 +125,18 @@ var scaleModes = [
 	{
 		'label':'Locrian', 
 		'formula':['1', 'b2', 'b3', '4', 'b5', 'b6', 'b7']
+	},
+	{
+		'label':'Melodic Minor', 
+		'formula':['1', '2', 'b3', '4', '5', '6', '7']
+	},
+	{
+		'label':'Lydian Dominant', 
+		'formula':['1', '2', '3', '#4', '5', '6', 'b7']
+	},
+	{
+		'label':'Harmonic Minor', 
+		'formula':['1', '2', 'b3', '4', '5', 'b6', '7']
 	}
 ];
 
