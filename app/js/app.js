@@ -43,7 +43,7 @@ var chordizer = angular.module('chordFinderApp', []).run(function($rootScope) {
 			}
 
 			for(var i = 0; i < chordFormula.length; i++) {
-				if (chordFormula[i].match(/[a-z]/i)) {
+				if (chordFormula[i].match(/[a-z#]/i)) {
 					var noteModifier = chordFormula[i].charAt(0);
 					var thisNoteIndex = parseInt(chordFormula[i].substring(1));
 					if(thisNoteIndex > scaleNotes.length) {
@@ -60,7 +60,15 @@ var chordizer = angular.module('chordFinderApp', []).run(function($rootScope) {
 						}
 					}
 					if(noteModifier === '#') {
-						
+						console.log('#');
+						var thisSharpedNote = notes.indexOf(thisNote) + 1;
+						//notesInScale.push(notes[thisSharpedNote]);
+						if(thisSharpedNote >= notes.length) {
+							var updatedSharpedNoteIndex = thisSharpedNote - notes.length;
+						 	notesInChord.push(notes[updatedSharpedNoteIndex]);
+						} else {
+							notesInChord.push(notes[thisSharpedNote]);
+						}
 					}
 				} else {
 					var thisNoteIndex = parseInt(chordFormula[i]) - 1;
@@ -186,5 +194,8 @@ var chordTypes = [
 	},
 	{
 		"label":"sus4", "formula":["1" , "4", "5"]
+	},
+	{
+		"label":"aug", "formula":["1" , "3", "#5"]
 	}
 ];
