@@ -132,9 +132,9 @@ var chordTypes = [
 	{
 		"label":"maj", "formula":["1", "3", "5"]
 	},
-	{
-		"label":"add4", "formula":["1", "3", "4", "5"]
-	},
+	// {
+	// 	"label":"add4", "formula":["1", "3", "4", "5"]
+	// },
 	{
 		"label":"6", "formula":["1", "3", "5", "6"]
 	},
@@ -156,21 +156,21 @@ var chordTypes = [
 	{
 		"label":"m", "formula":["1", "b3", "5"]
 	},
-	{
-		"label":"madd4", "formula":["1", "b3", "4", "5"]
-	},
+	// {
+	// 	"label":"madd4", "formula":["1", "b3", "4", "5"]
+	// },
 	{
 		"label":"m6", "formula":["1", "b3", "5", "6"]
 	},
 	{
 		"label":"m7", "formula":["1", "b3", "5", "b7"]
 	},
-	{
-		"label":"madd9", "formula":["1", "b3", "5", "9"]
-	},
-	{
-		"label":"m6/9", "formula":["1", "b3", "5", "6", "9"]
-	},
+	// {
+	// 	"label":"madd9", "formula":["1", "b3", "5", "9"]
+	// },
+	// {
+	// 	"label":"m6/9", "formula":["1", "b3", "5", "6", "9"]
+	// },
 	{
 		"label":"m9", "formula":["1", "b3", "5", "b7", "9"]
 	},
@@ -186,9 +186,9 @@ var chordTypes = [
 	{
 		"label":"9", "formula":["1" , "3", "5", "b7", "9"]
 	},
-	{
-		"label":"11", "formula":["1" , "5", "b7", "11"]
-	},
+	// {
+	// 	"label":"11", "formula":["1" , "5", "b7", "11"]
+	// },
 	{
 		"label":"dim", "formula":["1" , "b3", "b5"]
 	},
