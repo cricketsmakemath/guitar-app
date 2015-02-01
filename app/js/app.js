@@ -6,6 +6,7 @@ var chordizer = angular.module('chordFinderApp', []).run(function($rootScope) {
 	$rootScope.chordType;
 	$rootScope.scaleNote;
 	$rootScope.scaleType;
+	$rootScope.chordProgression = [];
 
 	$rootScope.GlobalHelpers = {
 
@@ -79,6 +80,11 @@ var chordizer = angular.module('chordFinderApp', []).run(function($rootScope) {
 				}
 			}
 			return notesInChord;
+		},
+
+		addChordToProgression: function(chordNote, chordType) {
+			$rootScope.chordProgression.push('a');
+			console.log('pushed');
 		}
 
 	};
@@ -229,3 +235,4 @@ var chordTypes = [
 		"label":"7b9", "formula":["1", "3", "5", "b7", "b9"]
 	}	
 ];
+

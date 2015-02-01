@@ -28,13 +28,13 @@
 			  		<div class="panel-body">
 
 			  			<div class="row">
-			  				<div class="col-lg-3">
+			  				<div class="col-sm-6 col-md-3 col-lg-3">
 			  					<select class="form-control" ng-model="scaleNote" ng-change="getScale()">
 			  						<option value="" disabled selected>Note</option>
 									<option ng-repeat="note in notes">{{note}}</option>
 								</select>
 			  				</div>
-			  				<div class="col-lg-5">
+			  				<div class="col-sm-6 col-md-5 col-lg-5">
 			  					<select class="form-control" ng-model="scaleType" ng-change="getScale()">
 			  						<option value="" disabled selected>Scale</option>
 									<option ng-repeat="scaleMode in scaleModes">{{scaleMode.label}}</option>
@@ -87,17 +87,20 @@
 			  		<div class="panel-body">
 
 			  			<div class="row">
-			  				<div class="col-lg-3">
+			  				<div class="col-sm-4 col-md-4 col-lg-3">
 			  					<select class="form-control chord-form-control" id="chord-note" ng-model="chordNote" ng-change="chordDescription()">
 			  						<option value="" disabled selected>Note</option>
 									<option ng-repeat="note in notes" value="{{note}}">{{note}}</option>
 								</select>
 			  				</div>
-			  				<div class="col-lg-5">
+			  				<div class="col-sm-4 col-md-4 col-lg-5">
 			  					<select class="form-control chord-form-control" id="chord-type" ng-model="chordType" ng-change="chordDescription()">
 			  						<option value="" disabled selected>Chord Type</option>
 									<option ng-repeat="chordType in chordTypes" value="{{chordType.label}}">{{chordType.label}}</option>
 								</select>
+			  				</div>
+			  				<div class="col-sm-4 col-md-4 col-lg-4">
+			  					<button type="button" class="btn btn-default">Add To Progression</button>
 			  				</div>
 			  				
 			  			</div>
@@ -127,19 +130,24 @@
 				    </div>
 				</div>
 
+
+
+
+				<div class="panel panel-primary" ng-controller="NoteListCtrl">
+					<div class="panel-heading">Chord Progression</div>
+			  		<div class="panel-body">
+
+			  			<div class="row">
+			  				
+			  				
+			  			</div>
+			  			
+
+				    </div>
+				</div>
+
 			</div>
 		</div>
-
-		
-
-
-
-
-
-
-
-
-
 
 	</div>
 </body>
